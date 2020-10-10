@@ -8,7 +8,7 @@ public class UserRegistration {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Enter your First Name");
+	/*	System.out.println("Enter your First Name");
 		String firstName = sc.nextLine();
 		boolean fName = firstName.matches("^[A-Z][a-zA-Z]{2,}$");
 
@@ -52,11 +52,11 @@ public class UserRegistration {
 			System.out.println("Mobile number does not match the requirements");
 		}
 		
-		
+*/	
 		System.out.println("Enter your password");
 		String password = sc.nextLine();
 		sc.close();
-		Boolean p = password.matches("[a-z]{0,}[A-Z]{1,}[a-z]{0,}[0-9]{1,}${8,}");
+		Boolean p = password.matches("[a-z]{0,}[A-Z]{1,}[a-z]{0,}[@$%*#./?]{1}[0-9]{1,}${8,}");
 
 		// Validating password using Rule 3
 		if (p == true) {
@@ -67,3 +67,4 @@ public class UserRegistration {
 	}
 
 }
+ 
