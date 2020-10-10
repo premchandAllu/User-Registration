@@ -8,50 +8,52 @@ public class UserRegistration {
 
 	public static void main(String[] args) {
 
-		// First Name
-		System.out.println("Enter your First Name");
 		Scanner sc = new Scanner(System.in);
-		String FirstName = sc.nextLine();
 
-		String pattern = "[A-Z]{1}[a-zA-Z]{2,}";
-		Pattern patternObj = Pattern.compile(pattern);
-		Matcher m = patternObj.matcher(FirstName);
+		System.out.println("Enter your First Name");
+		String firstName = sc.nextLine();
+		boolean fName = firstName.matches("^[A-Z][a-zA-Z]{2,}$");
 
-		if (m.matches()) {
-			System.out.println("Your First Name is " + FirstName);
+		// Validating First Name
+		if (fName == true) {
+			System.out.println("Your First Name is : " + firstName);
 		} else {
-			System.out.println("Please Enter First Name correctly");
+			System.out.println("First Name does not match the requirements");
 		}
 
-		// Last Name
 		System.out.println("Enter your Last Name");
-		String LastName = sc.nextLine();
+		String lastName = sc.nextLine();
+		boolean lName = lastName.matches("^[A-Z][a-zA-Z]{2,}$");
 
-		String LastNamePattern = "[A-Z]{1}[a-zA-Z]{2,}";
-		Pattern lNamePatternObj = Pattern.compile(LastNamePattern);
-		Matcher lastName = lNamePatternObj.matcher(LastName);
-
-		if (lastName.matches()) {
-			System.out.println("Your Last Name is " + LastName);
+		// Validating Last Name
+		if (lName == true) {
+			System.out.println("Your Last Name is : " + lastName);
 		} else {
-			System.out.println("Please Enter Last Name correctly");
+			System.out.println("Last Name does not match the requirements");
 		}
 
-		// Last Name
-		System.out.println("Enter your Email ID");
-		String Email = sc.nextLine();
+		System.out.println("Enter your email");
+		String email = sc.nextLine();
+		boolean e = email.matches("^[a-z]{3,}(.)[a-z]{0,}[@][a-z]{2,}[.][a-z]{2,}(.)[a-z]{0,}$");
+
+		// Validating Email
+		if (e == true) {
+			System.out.println("Your Email is : " + email);
+		} else {
+			System.out.println("Email does not match the requirements");
+		}
+
+		System.out.println("Enter your mobile number");
+		String mobile = sc.nextLine();
 		sc.close();
+		boolean m = mobile.matches("^[0-9]{2}[' '][6-9][0-9]{9}$");
 
-		String EmailPattern = "^[a-z]{3,}([.][a-z]{3,})[@][a-z]{2,}.[a-z]{2,}(.in)$";
-		Pattern EmailPatternObj = Pattern.compile(EmailPattern);
-		Matcher Emailmatcher = EmailPatternObj.matcher(Email);
-
-		if (Emailmatcher.matches()) {
-			System.out.println("Your Email ID is " + Email);
+		// Validating Mobile Number
+		if (m == true) {
+			System.out.println("Your Mobile number is : " + mobile);
 		} else {
-			System.out.println("Please Enter Email ID correctly");
+			System.out.println("Mobile number does not match the requirements");
 		}
-
 	}
 
 }
