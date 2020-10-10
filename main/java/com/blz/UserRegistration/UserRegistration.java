@@ -45,7 +45,6 @@ public class UserRegistration {
 
 		System.out.println("Enter your mobile number");
 		String mobile = sc.nextLine();
-		sc.close();
 		boolean m = mobile.matches("^[0-9]{2}[' '][6-9][0-9]{9}$");
 
 		// Validating Mobile Number
@@ -53,6 +52,19 @@ public class UserRegistration {
 			System.out.println("Your Mobile number is : " + mobile);
 		} else {
 			System.out.println("Mobile number does not match the requirements");
+		}
+		
+		
+		System.out.println("Enter your password");
+		String password = sc.nextLine();
+		sc.close();
+		Boolean p = password.matches("[a-z]{8,}");
+
+		// Validating password using Rule 1
+		if (p == true) {
+			System.out.println("Your Password is : " + password);
+		} else {
+			System.out.println("Password does not match the requirements");
 		}
 	}
 
