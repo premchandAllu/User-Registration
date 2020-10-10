@@ -10,8 +10,7 @@ public class UserRegistration {
 		System.out.println("Enter your First Name");
 		Scanner sc= new Scanner(System.in);
 		String FirstName =sc.nextLine();
-		sc.close();
-		
+
 		String pattern = "[A-Z]{1}[a-zA-Z]{2,}";
 		Pattern patternObj =  Pattern.compile(pattern);
 		Matcher m= patternObj.matcher(FirstName);
@@ -23,6 +22,25 @@ public class UserRegistration {
 		else
 		{ 
 			System.out.println("Please Enter First Name correctly");
+		}
+		
+		
+		
+		System.out.println("Enter your Last Name");
+		String LastName =sc.nextLine();
+		sc.close();
+
+		String LastNamePattern = "[A-Z]{1}[a-zA-Z]{2,}";
+		Pattern lNamePatternObj =  Pattern.compile(LastNamePattern);
+		Matcher lastName= lNamePatternObj.matcher(LastName);
+		
+		if(lastName.matches())
+		{ 
+			System.out.println("Your Last Name is "+LastName);
+		}
+		else
+		{ 
+			System.out.println("Please Enter Last Name correctly");
 		}
 		
 	}
