@@ -58,7 +58,7 @@ public class UserRegistration {
 		System.out.println("Enter your password");
 		String password = sc.nextLine();
 		sc.close();
-		Boolean p = password.matches("[a-z]{8,}");
+		Boolean p = password.matches("[a-z]{0,}[A-Z]{1,}[a-z]{0,}.{8,}");
 
 		// Validating password using Rule 1
 		if (p == true) {
