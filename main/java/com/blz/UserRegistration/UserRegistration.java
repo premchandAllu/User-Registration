@@ -1,8 +1,6 @@
 package com.blz.UserRegistration;
 
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class UserRegistration {
 
@@ -58,9 +56,9 @@ public class UserRegistration {
 		System.out.println("Enter your password");
 		String password = sc.nextLine();
 		sc.close();
-		Boolean p = password.matches("[a-z]{0,}[A-Z]{1,}[a-z]{0,}.{8,}");
+		Boolean p = password.matches("[a-z]{0,}[A-Z]{1,}[a-z]{0,}[0-9]{1,}${8,}");
 
-		// Validating password using Rule 1
+		// Validating password using Rule 3
 		if (p == true) {
 			System.out.println("Your Password is : " + password);
 		} else {
