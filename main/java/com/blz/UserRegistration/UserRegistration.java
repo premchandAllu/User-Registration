@@ -27,7 +27,7 @@ public class UserRegistration {
 	
 	public boolean checkEmail(String EmailID)
 	 {
-	   boolean e = EmailID.matches ("^[A-Z][a-zA-Z]{2,}$");
+	   boolean e = EmailID.matches ("^[a-z]{3,}(.)[a-z]{0,}[@][a-z]{2,}[.][a-z]{2,}(.)[a-z]{0,}$");
 
      if(e)
       {
@@ -39,7 +39,7 @@ public class UserRegistration {
 	
 	public boolean checkPhoneNumber(String PhoneNo)
 	 {
-	   boolean p = PhoneNo.matches ("^[A-Z][a-zA-Z]{2,}$");
+	   boolean p = PhoneNo.matches ("^[0-9]{2}[' '][6-9][0-9]{9}$");
 
      if(p)
       {
@@ -50,7 +50,7 @@ public class UserRegistration {
 	
 	public boolean checkPassword(String Password)
 	 {
-	   boolean p1 = Password.matches ("^[A-Z][a-zA-Z]{2,}$");
+	   boolean p1 = Password.matches ("[a-z]{0,}[A-Z]{1,}[a-z]{0,}[@$%*#./?]{1}[0-9]{1,}${8,}");
 
     if(p1)
      {
