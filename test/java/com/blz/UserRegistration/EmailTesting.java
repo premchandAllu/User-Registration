@@ -11,7 +11,7 @@ public class EmailTesting {
 		public void testEmail()
 		{
 			UserRegistration obj = new UserRegistration();
-			assertTrue("Check pattern defined for correct type of Email 1", obj.checkEmail("abc-100@yahoo.com");
+			assertTrue("Check pattern defined for correct type of Email 1", obj.checkEmail("abc-100@yahoo.com"));
 			assertTrue("Check pattern defined for correct type of Email 2", obj.checkEmail("abc@yahoo.com"));
 			assertTrue("Check pattern defined for correct type of Email 3", obj.checkEmail("abc.100@yahoo.com"));
 			assertTrue("Check pattern defined for correct type of Email 4", obj.checkEmail("abc111@yahoo.com"));
@@ -26,5 +26,3 @@ public class EmailTesting {
 		}
 	}
 
-
-}
