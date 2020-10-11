@@ -7,6 +7,7 @@ import org.junit.Test;
 
 public class TestCustomException {
 
+
 	@Test
 	public void givenInvalidFirstName() throws InvalidUserDetailsException {
 		UserRegistration ur = new UserRegistration();
@@ -31,7 +32,7 @@ public class TestCustomException {
 	@Test
 	public void givenInvalidMobile() throws InvalidUserDetailsException {
 		UserRegistration ur = new UserRegistration();
-		boolean mobile = ur.checkPhoneNumber("918888888888");
+		boolean mobile = ur.checkMobile("918888888888");
 		Assert.assertEquals(false, mobile);
 	}
 
