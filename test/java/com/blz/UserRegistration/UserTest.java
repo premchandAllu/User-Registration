@@ -1,27 +1,28 @@
 package com.blz.UserRegistration;
 
-public class UserRegistration {
-  
+public class UserTest {
+
+	
 	public boolean checkFirstName(String firstName)
 	 {
 	   boolean fName = firstName.matches ("^[A-Z][a-zA-Z]{2,}$");
 
-     if(fName)
-      {
-  	  return true; } 
-     else 
-  	  return false;
+      if(fName)
+       {
+   	  return true; } 
+      else 
+   	  return false;
 	  }
 	
 	public boolean checkLastName(String LastName)
 	 {
 	   boolean LName = LastName.matches ("^[A-Z][a-zA-Z]{2,}$");
 
-     if(LName)
-      {
-  	  return true; } 
-     else 
-  	  return false;
+      if(LName)
+       {
+   	  return true; } 
+      else 
+   	  return false;
 	  }
 	
 	
@@ -29,11 +30,11 @@ public class UserRegistration {
 	 {
 	   boolean e = EmailID.matches ("^[A-Z][a-zA-Z]{2,}$");
 
-     if(e)
-      {
-  	  return true; } 
-     else 
-  	  return false;
+      if(e)
+       {
+   	  return true; } 
+      else 
+   	  return false;
 	  }
 	
 	
@@ -41,25 +42,11 @@ public class UserRegistration {
 	 {
 	   boolean p = PhoneNo.matches ("^[A-Z][a-zA-Z]{2,}$");
 
-     if(p)
-      {
-  	  return true; } 
-     else 
-  	  return false;
+      if(p)
+       {
+   	  return true; } 
+      else 
+   	  return false;
 	  }
 	
-	public boolean checkPassword(String Password)
-	 {
-	   boolean p1 = Password.matches ("^[A-Z][a-zA-Z]{2,}$");
-
-    if(p1)
-     {
- 	  return true; } 
-    else 
- 	  return false;
-	  }
-	
-}	
-
-
-
+}
